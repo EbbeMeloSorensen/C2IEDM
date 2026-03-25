@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Application", "C2IED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFrameworkCore", "C2IEDM.Persistence.EntityFrameworkCore\C2IEDM.Persistence.EntityFrameworkCore.csproj", "{4F0614BE-FD81-4451-9D95-B4908F8C4700}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFrameworkCore.Sqlite", "C2IEDM.Persistence.EntityFrameworkCore.Sqlite\C2IEDM.Persistence.EntityFrameworkCore.Sqlite.csproj", "{DC1A15DA-FE94-4AFA-B6A5-C4448AD8C2AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFrameworkCore.PostgreSQL", "C2IEDM.Persistence.EntityFrameworkCore.PostgreSQL\C2IEDM.Persistence.EntityFrameworkCore.PostgreSQL.csproj", "{A71E4599-63C8-46B3-B01B-0F876FF2BB6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFrameworkCore.SqlServer", "C2IEDM.Persistence.EntityFrameworkCore.SqlServer\C2IEDM.Persistence.EntityFrameworkCore.SqlServer.csproj", "{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +45,18 @@ Global
 		{4F0614BE-FD81-4451-9D95-B4908F8C4700}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F0614BE-FD81-4451-9D95-B4908F8C4700}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F0614BE-FD81-4451-9D95-B4908F8C4700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1A15DA-FE94-4AFA-B6A5-C4448AD8C2AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1A15DA-FE94-4AFA-B6A5-C4448AD8C2AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1A15DA-FE94-4AFA-B6A5-C4448AD8C2AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1A15DA-FE94-4AFA-B6A5-C4448AD8C2AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71E4599-63C8-46B3-B01B-0F876FF2BB6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71E4599-63C8-46B3-B01B-0F876FF2BB6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71E4599-63C8-46B3-B01B-0F876FF2BB6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71E4599-63C8-46B3-B01B-0F876FF2BB6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
