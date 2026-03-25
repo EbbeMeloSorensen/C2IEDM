@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Infrastructure",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.API", "C2IEDM.Web.API\C2IEDM.Web.API.csproj", "{7EA326DA-0384-D41B-D01F-F8F26E2504CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.UI.Console", "C2IEDM.UI.Console\C2IEDM.UI.Console.csproj", "{27E6C7C0-6EBF-44DF-8097-E7DBB1F73D15}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27E6C7C0-6EBF-44DF-8097-E7DBB1F73D15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27E6C7C0-6EBF-44DF-8097-E7DBB1F73D15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27E6C7C0-6EBF-44DF-8097-E7DBB1F73D15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27E6C7C0-6EBF-44DF-8097-E7DBB1F73D15}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
