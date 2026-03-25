@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.UI.WPF", "C2IEDM.UI.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Persistence", "C2IEDM.Web.Persistence\C2IEDM.Web.Persistence.csproj", "{5C59008A-9591-4618-BE3A-7775AB7FED61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Application", "C2IEDM.Web.Application\C2IEDM.Web.Application.csproj", "{F6DBAD36-6277-4178-A749-A5601BEF3BE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Infrastructure", "C2IEDM.Web.Infrastructure\C2IEDM.Web.Infrastructure.csproj", "{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +79,14 @@ Global
 		{5C59008A-9591-4618-BE3A-7775AB7FED61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C59008A-9591-4618-BE3A-7775AB7FED61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C59008A-9591-4618-BE3A-7775AB7FED61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6DBAD36-6277-4178-A749-A5601BEF3BE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6DBAD36-6277-4178-A749-A5601BEF3BE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6DBAD36-6277-4178-A749-A5601BEF3BE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6DBAD36-6277-4178-A749-A5601BEF3BE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
