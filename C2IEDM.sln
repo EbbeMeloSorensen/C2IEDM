@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Persistence.EntityFrameworkCore.SqlServer", "C2IEDM.Persistence.EntityFrameworkCore.SqlServer\C2IEDM.Persistence.EntityFrameworkCore.SqlServer.csproj", "{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.ViewModel", "C2IEDM.ViewModel\C2IEDM.ViewModel.csproj", "{E2EB3373-6BB7-4544-9376-4B1A3D0D96BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -57,6 +59,10 @@ Global
 		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0EFAAD9A-D8C3-43F0-9E50-7099A3C018EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2EB3373-6BB7-4544-9376-4B1A3D0D96BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2EB3373-6BB7-4544-9376-4B1A3D0D96BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2EB3373-6BB7-4544-9376-4B1A3D0D96BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2EB3373-6BB7-4544-9376-4B1A3D0D96BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
