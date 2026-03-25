@@ -402,7 +402,8 @@ public class MainWindowViewModel : ViewModelBase
 
         DrawMapOfDenmark();
 
-        InitializeTimestampsOfInterest();
+        // Doesn't work
+        //InitializeTimestampsOfInterest();
 
         UpdateRetrospectionControls();
         UpdateControlBackground();
@@ -674,7 +675,8 @@ public class MainWindowViewModel : ViewModelBase
             }
         }
 
-        InitializeTimestampsOfInterest();
+        // Doesn't work
+        // InitializeTimestampsOfInterest();
 
         if (_autoRefresh.Object)
         {
@@ -1015,6 +1017,9 @@ public class MainWindowViewModel : ViewModelBase
     private void RefreshHistoricalTimeSeriesView(
         bool recalculate)
     {
+        // Doesn't work
+        return;
+
         // Called:
         //   - During upstart (ok)
         //   - When a major world window update occurs (such as after a drag) (ok)
@@ -1056,6 +1061,9 @@ public class MainWindowViewModel : ViewModelBase
 
     private void RefreshDatabaseTimeSeriesView()
     {
+        // Doesn't work
+        return;
+
         // Called:
         //   - During upstart
         //   - When a new observing facility is created
