@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Application", "C
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.Infrastructure", "C2IEDM.Web.Infrastructure\C2IEDM.Web.Infrastructure.csproj", "{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "C2IEDM.Web.API", "C2IEDM.Web.API\C2IEDM.Web.API.csproj", "{7EA326DA-0384-D41B-D01F-F8F26E2504CC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F8CCB7EA-8A28-4B1E-B7BB-07EB183C79C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7EA326DA-0384-D41B-D01F-F8F26E2504CC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

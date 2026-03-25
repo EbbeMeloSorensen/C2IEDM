@@ -1,0 +1,6 @@
+@C2IEDM.Web.API_HostAddress = http://localhost:5229
+
+GET {{C2IEDM.Web.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
