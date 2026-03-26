@@ -1,19 +1,22 @@
 # C2IEDM
 
 ## Opdatering 26. marts 2026
-Dette projekt tog udgangspunkt i Neil Cummings Udemy kursus "Complete Guide to building an app with .Net Core and React" og dine erfaringer med
-projekterne PR og Glossary. Du ville gerne lave noget, der handlede om C2IEDM, både for at lege med en mere kompleks datamodel og for at lave en
-web applikation, der viste ting på et kort. Features relateret til kortvisning var inspireret af oversvømmelsesprojektet, som du var allokeret
-til i den periode. Undevejs startede dfos projektet så småt op, og i den forbindelse ville du gerne lave et projekt, der demonstrerede, hvad
-bitemporalitet er. Så du "udvidede" dette projekt i retning af et wigos inspireret tool til management af observing facilities. Demo-effekten
-var implementeringsteknisk vellykket, men undervejs reflekterede du over, at du aldrig helt havde forstået John Doe eksemplet på
-https://en.wikipedia.org/wiki/Temporal_database - specielt det med at man skulle lave 2 nye rækker, når man lavede en (prospektiv) ændring.
+Dette projekt tog udgangspunkt i Neil Cummings Udemy kursus "Complete Guide to building an app with .Net Core and React" og dine erfaringer med projekterne PR og Glossary. Du ville gerne lave noget, der handlede om C2IEDM, både for at lege med en mere kompleks datamodel og for at lave en web applikation, der viste ting på et kort. Features relateret til kortvisning var inspireret af oversvømmelsesprojektet, som du var allokeret til i den periode. Undevejs startede dfos projektet så småt op, og i den forbindelse ville du gerne lave et projekt, der demonstrerede, hvad bitemporalitet er. Så du "udvidede" dette projekt i retning af et wigos-inspireret tool til management af observing facilities. Demo-effekten var implementeringsteknisk vellykket, men undervejs reflekterede du over, at du aldrig helt havde forstået John Doe eksemplet på https://en.wikipedia.org/wiki/Temporal_database - specielt det med at man skulle lave 2 nye rækker, når man lavede en (prospektiv) ændring.
 
-Det gik således op for dig, at du havde fået lavet en pseudo-agtig implementering af bitemporalitet, der var god nok til demonstration af,
-konceptet, men ikke rent eller velegnet til udbygning. Mere konkret havde du designet datamodellen sådan at du havde en central entitet i form af
-Observing Facility, som havde en en-til-mange relation til entiteten Geospatial Location. Der var således "ok" bitemporalitet for geospatielle
-lokationer, der kunne oprettes, ændres og slettes, men hvor det forholdt sig anderledes for observing facilities, så det f.eks. ikke var muligt
-at lave retroaktive ændringer for disse.
+Datamodellen i C2IEDM projektet var essentielt designet lige som datamodellen for SMS-systemet fra Cowi, hvor entiteter har historik i kraft af de 3 ekstra attributter: ObjectId, Created og Superseded. Her gælder der nok så vigtigt, at prospektive ændringer indebærer, at man skriver current time i Superseded feltet og så laver en ny række med samme objekt id, hvor nogle attributter har nye værdier, og hvor Superseded er sat til null eller MaxDate. Det harmonerer ikke med det bitemporale princip om at man skal lave ***2*** nye rækker i forbindelse med en prospektiv ændring. Den bitemporalt korrekte metode involverer disse ***3*** række-operationer:
+
+* Den eksisterende række termineres ved at sætte current time i superseded-feltet. I menneskesprog indikerer man hermed, at informationen om at det seneste sæt af egenskaber ville komme til at gøre sig gældende i "al evighed", ikke længere er retvisende.
+* Der laves en ny række, som er magen til den supersedede, blot med de 2 forskelle:
+  * Virkningstidsintervallet afsluttes ved at skrive et tidspunkt i DateTo-feltet. I menneskesprog indikerer man hermed, at det gamle sæt af egenskaber gjorde sig gældende indtil et bestemt tidspunkt)
+  * Superseded feltet er tomt (informationen er retvisende)
+* Der laves endnu en ny række, hvor der gælder:
+  * Et antal attributter har andre værdier end i den supersedede række.
+  * DateFrom feltet har samme værdi som blev skrevet i DateTo-feltet for den første af de 2 nye rækker.
+  * Superseded feltet er tomt (informationen er retvisende)
+
+Det stod længe ikke klart for mig, hvorfor der var behov for 2 nye rækker, men man skal holde sig for øje, at der i SMS-designet altid *kun vil være én gældende række for et givet objekt*. I modsætning hertil gælder der for en bitemporal database, at der vil være et *antal rækker*, der repræsenterer *samme objekt*, og som *alle er gældende* - blot for forskellige perioder af objektets levetid. En naiv indvending kunne være, at man bare kan kigge i de supersedede rækker for at se objektets historik, men her skal man holde sig for øje, at supersedede rækker principielt er at anskue som værende *slettede*. Så det at læse dem er kun relevant inden for rammerne af den ene use case, der handler om at inspicere, hvilket indhold af databasen, der gjorde sig gældende på et tidligere tidspunkt. Det er iøvrigt helt centralt, at en bitemporal datamodel i modsætning til det mere simple design tillader udførelse af såkaldt *retroaktive ændringer*, hvor man retter informationen om et objekt for tidligere, lukkede tidsintervaller. Billedlig talt kan man sige, at en bitemporal datamodel supporterer vedligehold af gant-style "trapper" af information om objekter i løbet af deres livstid.
+
+Alt i alt gik det op for dig, at du med C2IEDM-projektet havde fået lavet en pseudo-agtig implementering af bitemporalitet, der var god nok til demonstration af, konceptet, men ikke bitemporalt rent eller velegnet til udbygning. Mere konkret havde du designet datamodellen sådan at du havde en central entitet i form af Observing Facility, som havde en en-til-mange relation til entiteten Geospatial Location. Der var således "ok" bitemporalitet for geospatielle lokationer, som der kunne være flere af for en og samme observing facility, og hvor disse kunne oprettes, ændres og slettes, men hvor det forholdt sig anderledes for observing facilities, så det f.eks. ikke var muligt at lave retroaktive ændringer for disse.
 
 Derfor parkerede du dette projekt for i stedet at lave det, du kaldte PR_TRIMMED, hvor du ikke prioriterede det med kortvisning men til
 gengæld fokuserede på at lave et mere rent design fsa de bitemporale aspekter af projektet.
