@@ -273,6 +273,9 @@ public class MainWindowViewModel : ViewModelBase
             unitOfWorkFactory,
             _logger);
 
+        _databaseWriteTimes = new List<DateTime>();
+        _historicalChangeTimes = new List<DateTime>();
+
         _historicalTimeOfInterest = new ObservableObject<DateTime?>
         {
             Object = null
@@ -403,7 +406,7 @@ public class MainWindowViewModel : ViewModelBase
         DrawMapOfDenmark();
 
         // Doesn't work
-        //InitializeTimestampsOfInterest();
+        InitializeTimestampsOfInterest();
 
         UpdateRetrospectionControls();
         UpdateControlBackground();
@@ -676,7 +679,7 @@ public class MainWindowViewModel : ViewModelBase
         }
 
         // Doesn't work
-        // InitializeTimestampsOfInterest();
+        InitializeTimestampsOfInterest();
 
         if (_autoRefresh.Object)
         {
@@ -1018,7 +1021,7 @@ public class MainWindowViewModel : ViewModelBase
         bool recalculate)
     {
         // Doesn't work
-        return;
+        //return;
 
         // Called:
         //   - During upstart (ok)
@@ -1062,7 +1065,7 @@ public class MainWindowViewModel : ViewModelBase
     private void RefreshDatabaseTimeSeriesView()
     {
         // Doesn't work
-        return;
+        //return;
 
         // Called:
         //   - During upstart

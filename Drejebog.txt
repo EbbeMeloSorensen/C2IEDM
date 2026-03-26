@@ -1,0 +1,50 @@
+1) Start med en tom database og med at have skjult retrospection controls og filtre.
+2) Lav en ny, hvor den sættes til at være blevet oprettet på dags dato
+   -> Den nye stations navn skal figurere i listen 
+   -> Der skal placeres en sort prik på kortet
+   -> Der skal laves en lodret streg i "Database Write Time" viewet (kun relevant hvis database write times viewet vises)
+   -> Der skal laves en lodret streg i "Historical Time" viewet (kun relevant hvis historical time viewet vises)
+3) Lav en ny, hvor den sættes til at være blevet oprettet på en dato før i tiden
+   -> Den nye stations navn skal figurere i listen 
+   -> Der skal placeres en sort prik på kortet
+   -> Der skal laves en lodret streg i "Database Write Time" viewet (kun relevant hvis database write times viewet vises)
+   -> Der skal laves en lodret streg i "Historical Time" viewet (kun relevant hvis historical time viewet vises)
+4) Lav en ny, hvor den sættes til at være blevet oprettet på en dato før i tiden, og hvor den også sættes til at være nedlagt.
+   Gør her opmærksom på at den i modsætning til de andre hverken vises i listen eller på kortet (fordi den jo er nedlagt og vi kigger på current situation)
+   -> Den nye stations navn skal IKKE figurere i listen 
+   -> Der skal IKKE placeres en sort prik på kortet
+   -> Der skal laves en lodret streg i "Database Write Time" viewet (kun relevant hvis database write times viewet vises)
+   -> Der skal laves to lodrette streger i "Historical Time" viewet (dvs hvis de ikke svarer til nogle, der allerede er der. I øvrigt kun relevant hvis historical time viewet vises)
+5) Konfigurer filteret til også at vise nedlagte stationer
+   -> Den nedlagte stations navn skal nu figurere i listen 
+   -> Den nedlagte station skal nu repræsenteres af en rød prik på kortet
+6) Gå tilbage i historisk tid og vis, hvordan det så ud, dengang den var aktiv, den som blev markeret som nedlagt (vis kort med falmede farver)
+   -> Den nedlagte stations navn skal nu figurere i listen 
+   -> Den nedlagte station skal nu repræsenteres af en SORT prik på kortet
+   -> Den første station, der blev oprettet skal nu IKKE figurere i listen, og den skal heller ikke markeres med nogen prik på kortet
+7) Gå frem til nutiden igen
+   -> Alle 3 stationer vises nu som før - 2 med sort og en med rød
+8) Vælg den første station, der blev lavet og korriger virkningstidsintervallet (dette er en retroaktiv ændring) for den, så den starter samme tid som de andre
+   -> Detaljeviewet opdateres, men listen og mappet ændres ikke
+9) Gå igen tilbage i tiden til den periode, hvor den 3. station var aktiv
+   -> Nu vises alle 3 stationer som sort, da de alle 3 var aktive i perioden
+10) Illustrer nu databasetid ved at gå tilbage til, HVAD DATABASEN påstod tidligere, specifikt lige før vi lavede den seneste ændring
+    (Her kan du måske tilføje en eller anden syret farve)
+   -> Her vises der IKKE nogen prik for den første station, da databasen jo på det tidspunkt mente at den havde en senere etableringstid
+   -> De knapper, der bruges i forbindelse med ændring af databasen, skal nu være disablede
+11) Gå tilbage til nutiden
+   -> Alle 3 stationer vises nu som før - 2 med sort og en med rød
+12) Tilføj en geospatiel lokation for den station, der ellers var nedlagt, med startdato svarende til slutdatoen for den første periode og 
+    lad slutdatoen være åben
+   -> Der vises nu 3 sorte prikker på kortet
+   -> Af detaljeviewet for den tredje station fremgår det, at den har 2 lokationer
+13) Demonstrer, hvordan man kan ændre navnet på en station og i øvrigt gå tilbage til en tid, hvor de havde et andet navn
+14) Demonstrer, hvordan man kan slette en station og i øvrigt gå tilbage til en tid, hvor de ikke var slettede
+
+Ideer:
+* Gør det sådan at dem, du sætter op, de begynder at generere måledata, og hvor data er fejlbehæftet med f.eks. outliers
+  .. Så kan man operere med et mode, hvor man kan få lov til at rense data
+* Mht Allans feedback, så husk lige, at du jo altså har lavet prototypen PERSISTENT IGNORANT, så du hurtigt kan skifte mellem forskellige data layers.
+  Som sådan skulle det kunne lade sig gøre at lave et plugin, der kalder en hvilken som helst anden backend. Prøv f.eks. at lave et plugin, der
+  kalder din asp.net core baserede backend, dvs det samme som din React applikation gør! Når du er så langt, burde det være overkommeligt at lave et
+  plugin, som wrapper det API, Lars laver
