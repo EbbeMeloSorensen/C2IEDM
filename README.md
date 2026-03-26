@@ -13,10 +13,18 @@ Det gik således op for dig, at du havde fået lavet en pseudo-agtig implementer
 konceptet, men ikke rent eller velegnet til udbygning. Mere konkret havde du designet datamodellen sådan at du havde en central entitet i form af
 Observing Facility, som havde en en-til-mange relation til entiteten Geospatial Location. Der var således "ok" bitemporalitet for geospatielle
 lokationer, der kunne oprettes, ændres og slettes, men hvor det forholdt sig anderledes for observing facilities, så det f.eks. ikke var muligt
-at lave retroaktive ændringer for observing facilities.
+at lave retroaktive ændringer for disse.
 
 Derfor parkerede du dette projekt for i stedet at lave det, du kaldte PR_TRIMMED, hvor du ikke prioriterede det med kortvisning men til
-gengæld det at lave et mere rent design fsa de bitemporale aspekter af projektet.
+gengæld fokuserede på at lave et mere rent design fsa de bitemporale aspekter af projektet.
+
+C2IEDM projektet er relevant mht at plukke nogle dele ud og placere dem i en anden ramme såsom Temple-projektet. Det gælder f.eks.
+
+* C2IEDM features, både på datamodel-niveau, API-niveau og web client niveau
+* Brugergrænsefladedesign for WPF-applikationen C2IEDM.UI.WPF (Der er muligvis noget endnu bedre i PR_TRIMMED projektet)
+* Design for web clienten mht kortvisning og overlay af kort me d punkter.
+
+Når det er gjort, er det nok på sin plads at arkivere dette projekt, da flere aspekter af designet er uhensigtsmæssige, f.eks. det at der er 2 forskellige applikationslag, og der er for meget mudderkagebygning for datamodellen.
 
 # Gamle noter
  ## Sadle om til anden database provider
